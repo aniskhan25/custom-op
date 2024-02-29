@@ -29,7 +29,7 @@ except ImportError:
 class ZeroOutTest(test.TestCase):
 
   def testZeroOut(self):
-    with self.test_session():
+    with self.session():
       self.assertAllClose(
           zero_out([[1, 2], [3, 4]]), np.array([[1, 0], [0, 0]]))
 

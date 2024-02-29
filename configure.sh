@@ -102,7 +102,7 @@ if [[ "$TF_NEED_CUDA" == "0" ]]; then
     fi
     # Install CPU version
     echo 'Installing tensorflow-cpu......\n'
-    ${PIP} install tensorflow-cpu
+    ${PIP} install tensorflow
   fi
 
 else
