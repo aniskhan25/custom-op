@@ -14,7 +14,7 @@ cd custom-op
 You can build the pip package with make.
 
 ```bash
-  make zero_out_pip_pkg
+  make -f Makefile.puhti zero_out_pip_pkg
 ```
 
 ### Install and Test PIP Package
