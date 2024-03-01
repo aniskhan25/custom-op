@@ -72,11 +72,53 @@ singularity shell $SING_IMAGE
 Build the op with make,
 
 ```bash
-make time_two_op
+make -f Makefile.puhti time_two_op
 ```
 
 Test the op,
 
 ```bash
-make time_two_test
+make -f Makefile.puhti time_two_test
+```
+
+## Build Example time_two Op (GPU only on Lumi)
+
+Clone the repository.
+
+```bash
+git clone https://github.com/tensorflow/custom-op.git
+cd custom-op
+```
+
+### Load module
+
+Load module,
+
+```bash
+module use /appl/local/csc/modulefiles/
+ml tensorflow/2.12
+```
+
+Set env,
+
+```bash
+export SINGULARITY_BIND=$PWD
+```
+
+Run shell within the container
+
+```bash
+singularity shell $SING_IMAGE
+```
+
+Build the op with make,
+
+```bash
+make -f Makefile.lumi time_two_op
+```
+
+Test the op,
+
+```bash
+make -f Makefile.lumi time_two_test
 ```
