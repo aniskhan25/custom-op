@@ -1,5 +1,5 @@
 CXX := g++
-NVCC := nvcc
+NVCC := hipcc
 PYTHON_BIN_PATH = python
 
 ZERO_OUT_SRCS = $(wildcard tensorflow_zero_out/cc/kernels/*.cc) $(wildcard tensorflow_zero_out/cc/ops/*.cc)
